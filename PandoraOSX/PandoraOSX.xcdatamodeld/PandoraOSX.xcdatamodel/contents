@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3396" systemVersion="12F37" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="GenreInfo" representedClassName="GenreInfo" syncable="YES">
+        <attribute name="station_Id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="station_name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="stationInfo" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="StationInfo" inverseName="genreInfo_r" inverseEntity="StationInfo" syncable="YES"/>
+    </entity>
+    <entity name="StationInfo" representedClassName="StationInfo" syncable="YES">
+        <attribute name="station_categories" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="station_description" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="genreInfo_r" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GenreInfo" inverseName="stationInfo" inverseEntity="GenreInfo" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="GenreInfo" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="StationInfo" positionX="0" positionY="0" width="0" height="0"/>
+    </elements>
+</model>
